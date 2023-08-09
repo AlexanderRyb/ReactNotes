@@ -9,7 +9,7 @@ export const Editor = () => {
     <div className='editor-block'>
       <div className='page-title'><input type="text" className='title-edit-input' defaultValue={"page title"}></input></div>
       <div className='page-content-editor'>
-        <input type='text' className='page-content-input' defaultValue={'page content here'}></input>
+        <textarea className='page-content-input' defaultValue={'page content here'}></textarea>
         </div>
     </div>
   )
