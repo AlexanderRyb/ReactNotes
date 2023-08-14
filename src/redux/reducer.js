@@ -7,13 +7,13 @@ const initialState = {
 export default function reducer(state = initialState, action){
     switch (action.type){
         case "CREATENOTE":
+            console.log("state.notes")
             let updatedNoteList = state.notes
             let newnote = {}
             newnote.id = state.notes.length
             newnote.title = "new note"
             newnote.content = "note content"
             updatedNoteList.push(newnote)
-            console.log(state.notes)
             return{
                 //append new note to state
                 ...state,

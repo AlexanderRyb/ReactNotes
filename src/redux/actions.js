@@ -1,5 +1,5 @@
-export const createNote = () => {
-    return {
-      type: "CREATENOTE"
-    };
-  };
+const createNote = {
+  type: 'CREATENOTE',
+};
+
+export default createNote;
