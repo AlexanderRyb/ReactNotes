@@ -1,7 +1,9 @@
 const initialState = {
     notes:[
-        { id: 0, title: "new note", content: 'note content'},
+        { id: 0, title: "new note", content: 'note contentjk'},
     ],
+    activeNote: 0,
+    editorValue:""
 
 }
 export default function reducer(state = initialState, action){
@@ -18,11 +20,20 @@ export default function reducer(state = initialState, action){
             return{
                 //append new note to state
                 ...state,
-                notes: updatedNoteList
+                notes: updatedNoteList,
                 //switch to that note in the editor
+                activeNote: newnote.id
                 //
             }
 
+
+         case "SWITCHNOTE":
+            //put note content into the editor box
+
+            return{
+                ...state, 
+
+            }   
         default: 
         return state
     }

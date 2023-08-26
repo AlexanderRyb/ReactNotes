@@ -1,5 +1,9 @@
-const createNote = {
+export const createNote = {
   type: 'CREATENOTE',
 };
-
-export default createNote;
+export const switchNote = (noteid) => {
+  return {
+    type: "SWITCHNOTE",
+    payload: noteid,
+  };
+};
