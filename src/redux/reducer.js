@@ -34,6 +34,11 @@ export default function reducer(state = initialState, action){
                 ...state, 
 
             }   
+        case "CHANGECONTENT":
+            
+            return{
+
+            }    
         default: 
         return state
     }

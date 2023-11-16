@@ -7,3 +7,9 @@ export const switchNote = (noteid) => {
     payload: noteid,
   };
 };
+export const changeContent = (noteid) => {
+  return {
+    type: "CHANGECONTENT",
+    payload: noteid,
+  };
+};
