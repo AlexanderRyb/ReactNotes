@@ -4,12 +4,12 @@ export const createNote = {
 export const switchNote = (noteid) => {
   return {
     type: "SWITCHNOTE",
-    payload: noteid,
+    payload: { noteid },
   };
 };
-export const changeContent = (noteid) => {
+export const updateNote = (noteid) => {
   return {
-    type: "CHANGECONTENT",
-    payload: noteid,
+    type: "UPDATENOTE",
+    payload: noteid
   };
 };
