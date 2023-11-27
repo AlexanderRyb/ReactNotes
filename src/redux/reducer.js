@@ -33,7 +33,7 @@ export default function reducer(state = initialState, action){
             console. log("state: "+state.notes)
             return{
                 ...state, 
-                activeNote: action.payload.noteid
+                activeNote: action.payload.noteid 
 
             }   
         case "CHANGECONTENT":
