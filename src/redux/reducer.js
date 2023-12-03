@@ -1,6 +1,6 @@
 const initialState = {
     notes:[
-        { id: 0, title: "new note", content: 'note contentjk'},
+        { id: 0, title: "new note", content: 'note content default'},
     ],
     activeNote: 0,
     editorValue:""
@@ -36,9 +36,15 @@ export default function reducer(state = initialState, action){
                 activeNote: action.payload.noteid 
 
             }   
-        case "CHANGECONTENT":
-            
+        case "UPDATENOTE":
+            const newContent = action.payload
+            //const updatedNotes
             return{
+                ...state, 
+                notes: state.notes.map(
+                    (note, i) => i === state.activeNote ? {...note, content: action.payload}
+                                   : note
+                )
 
             }    
         default: 
