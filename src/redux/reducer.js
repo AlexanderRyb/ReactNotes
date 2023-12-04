@@ -36,8 +36,7 @@ export default function reducer(state = initialState, action){
                 activeNote: action.payload.noteid 
 
             }   
-        case "UPDATENOTE":
-            const newContent = action.payload
+        case "UPDATENOTECONTENT":
             //const updatedNotes
             return{
                 ...state, 
@@ -46,7 +45,16 @@ export default function reducer(state = initialState, action){
                                    : note
                 )
 
-            }    
+            }   
+        case "UPDATENOTETITLE":
+        return{
+            ...state, 
+            notes: state.notes.map(
+                (note, i) => i === state.activeNote ? {...note, title: action.payload}
+                               : note
+            )
+
+        }     
         default: 
         return state
     }

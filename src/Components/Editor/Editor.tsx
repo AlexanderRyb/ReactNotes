@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  {updateNote}  from '../../redux/actions';
+import  {updateNoteContent, updateNoteTitle}  from '../../redux/actions';
 
 
 import './editor.css'
@@ -15,12 +15,18 @@ const notes = useSelector((state: any)=> state.notes)
 
 const handleTextFieldChange = (e: any) => {
   const newValue = e.target.value;
-  dispatch(updateNote(newValue));
+  dispatch(updateNoteContent(newValue));
+};
+const handleTitleChange = (e: any) => {
+  const newValue = e.target.value;
+  dispatch(updateNoteTitle(newValue));
 };
 
   return (
     <div className='editor-block'>
-      <div className='page-title'><input type="text" className='title-edit-input' defaultValue={"page title"}></input></div>
+      <div className='page-title'>
+        <input type="text" className='title-edit-input' value={notes[activeNote].title}   onChange={handleTitleChange}></input>
+ </div>
       <div className='page-content-editor'>
         <textarea className='page-content-input' value={notes[activeNote].content}  
           onChange={handleTextFieldChange}

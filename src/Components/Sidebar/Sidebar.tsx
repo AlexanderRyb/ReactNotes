@@ -23,7 +23,7 @@ notes = notelist.map((item: any) => (
   dispatch(switchNote(item.id))
 }
   } > 
-    <p>{item.title} {item.id}</p>
+    <p>{item.title} </p>
     </div>
     ))
 
