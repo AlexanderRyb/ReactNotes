@@ -1,17 +1,26 @@
-.main-body{
-    width: 20%;
-    height: 100vh;
-    border: 1px solid red;
+.main-body {
+  width: 20%;
+  height: 100vh;
+  border: 1px solid grey;
+}
+.new-note-button {
+  width: 100px;
+}
+.note-item {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.active-note-item {
+  height: 40px;
+  box-sizing: border-box;
+  padding: 10px;
 
+  background-color: #ebebeb;
+  height: 100%;
 }
 .new-note-button{
-    width: 100px;
-}
-.note-item{
-    width: 100%;
-    border: 1px solid black;
-}
-.active-note-item{
-
-    border: 1px solid red;
+    width: 40%;
+    Height: 3%;
+    border: none;
 }

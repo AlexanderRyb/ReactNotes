@@ -8,7 +8,6 @@ const notelist = useSelector((state: any) => state.notes)
 
 const handleClick = () => { dispatch(createNote)};
 let notes =[]
-let className = 'note-item';
 const activeNote = useSelector((state: any)=> state.activeNote)
 
 notes = notelist.map((item: any) => (
@@ -23,7 +22,7 @@ notes = notelist.map((item: any) => (
   dispatch(switchNote(item.id))
 }
   } > 
-    <p>{item.title} </p>
+    {item.title} 
     </div>
     ))
 
