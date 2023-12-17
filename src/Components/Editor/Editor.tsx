@@ -1,4 +1,3 @@
-import { useState } from "react";
 import  {updateNoteContent, updateNoteTitle}  from '../../redux/actions';
 
 
