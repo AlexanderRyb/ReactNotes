@@ -30,7 +30,7 @@ export default function reducer(state = initialState, action){
          case "SWITCHNOTE":
             //put note content into the editor box
             console.log("action:"+action.payload.noteid)
-            console. log("state: "+state.notes)
+            
             return{
                 ...state, 
                 activeNote: action.payload.noteid 
