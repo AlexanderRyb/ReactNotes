@@ -14,7 +14,7 @@ export default function reducer(state = initialState, action){
             let newnote = {}
             newnote.id = state.notes.length
             newnote.title = "new note"
-            newnote.content = "note content"
+            newnote.content = ""
            updatedNoteList.push(newnote)
 
             return{

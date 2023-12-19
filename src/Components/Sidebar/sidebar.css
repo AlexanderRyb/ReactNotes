@@ -2,6 +2,7 @@
   width: 20%;
   height: 100vh;
   border: 1px solid grey;
+  background-color: #f3f3f3;
 }
 .new-note-button {
   width: 100px;
@@ -16,7 +17,7 @@
   box-sizing: border-box;
   padding: 10px;
 
-  background-color: #ebebeb;
+  background-color: #dddddd;
   height: 100%;
 }
 .new-note-button{

@@ -27,7 +27,7 @@ const handleTitleChange = (e: any) => {
         <input type="text" className='title-edit-input' value={notes[activeNote].title}   onChange={handleTitleChange}></input>
  </div>
       <div className='page-content-editor'>
-        <textarea className='page-content-input' value={notes[activeNote].content}  
+        <textarea className='page-content-input' placeholder="Type the content of your note here..." value={notes[activeNote].content}  
           onChange={handleTextFieldChange}
 
 
