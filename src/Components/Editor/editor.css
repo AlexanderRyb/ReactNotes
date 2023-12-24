@@ -23,5 +23,7 @@
     width: 90%;
     height: 100%;
     resize: none;
-    border: none
+    border: none;
+    overflow: auto;
+    outline: none;
 }

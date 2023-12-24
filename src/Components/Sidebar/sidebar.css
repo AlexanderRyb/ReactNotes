@@ -1,16 +1,41 @@
 .main-body {
   width: 20%;
   height: 100vh;
-  border: 1px solid grey;
   background-color: #f3f3f3;
 }
 .new-note-button {
-  width: 100px;
+  width: auto;
+  aspect-ratio: 1 / 1;
+  display: block;
+  margin: auto;
+
+  border: none;
+  box-sizing: border-box;
+}
+.new-note-tooltip{
+  visibility: hidden;
+  position: absolute;
+  box-sizing: border-box;
+
+  width: auto;
+
+
+}
+.new-note-button:hover{
+  box-sizing: border-box;
+  /* border: 1px dotted black; */
+
+  cursor: pointer;
+
+
 }
 .note-item {
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
+}
+.note-item:hover, .active-note-item:hover{
+  cursor: pointer;
 }
 .active-note-item {
   height: 40px;
@@ -19,9 +44,4 @@
 
   background-color: #dddddd;
   height: 100%;
-}
-.new-note-button{
-    width: 40%;
-    Height: 3%;
-    border: none;
 }

@@ -1,6 +1,6 @@
 const initialState = {
     notes:[
-        { id: 0, title: "new note", content: 'note content default'},
+        { id: 0, title: "new note", content: 'GitHub repo: https://github.com/AlexanderRyb/ReactNotes'},
     ],
     activeNote: 0,
     editorValue:""
