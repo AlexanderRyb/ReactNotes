@@ -1,5 +1,6 @@
 import  {updateNoteContent, updateNoteTitle}  from '../../redux/actions';
 
+import { FaTrash } from "react-icons/fa";
 
 import './editor.css'
 import { useSelector,useDispatch } from 'react-redux';
@@ -24,7 +25,10 @@ const handleTitleChange = (e: any) => {
   return (
     <div className='editor-block'>
       <div className='page-title'>
-        <input type="text" className='title-edit-input' value={notes[activeNote].title}   onChange={handleTitleChange}></input>
+        <input type="text" className='title-edit-input' value={notes[activeNote].title}   onChange={handleTitleChange}>
+
+        </input>
+
  </div>
       <div className='page-content-editor'>
         <textarea className='page-content-input' placeholder="Type the content of your note here..." value={notes[activeNote].content}  
@@ -33,7 +37,13 @@ const handleTitleChange = (e: any) => {
 
 
             ></textarea>
+
         </div>
+        <footer>
+                  <FaTrash style={{ fontSize: '20px', verticalAlign: "baseline", position: "absolute", margin: "0", border: "1px solid red"}}></FaTrash>
+
+        </footer>
+
     </div>
   )
 }

@@ -25,11 +25,12 @@ notes = notelist.map((item: any) => (
 }
   } > 
     {item.title} 
+
     </div>
     ))
 
   return (
-    <div className="main-body">
+    <div className="sidebar">
       <button className='new-note-button' onClick={handleClick} >
         <FaPlus style={{ fontSize: '15px', display: 'block', margin: "auto"}}></FaPlus>
         <div className='new-note-tooltip'>create new note</div>
