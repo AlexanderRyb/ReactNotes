@@ -1,7 +1,5 @@
 import  {updateNoteContent, updateNoteTitle}  from '../../redux/actions';
 
-import { FaTrash } from "react-icons/fa";
-
 import './editor.css'
 import { useSelector,useDispatch } from 'react-redux';
 
@@ -40,7 +38,10 @@ const handleTitleChange = (e: any) => {
 
         </div>
         <footer>
-                  <FaTrash style={{ fontSize: '20px', verticalAlign: "baseline", position: "absolute", margin: "0", border: "1px solid red"}}></FaTrash>
+          <div className='creation-date'>Creation date: </div>
+          <div className='word-count'>Word count: </div>
+          <div className='character-count'>Character count: </div>
+          <div className='remove-note-button'>Remove note</div>
 
         </footer>
 
