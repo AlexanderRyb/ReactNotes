@@ -1,4 +1,4 @@
-import  {updateNoteContent, updateNoteTitle}  from '../../redux/actions';
+import  {updateNoteContent, updateNoteTitle, removeNote}  from '../../redux/actions';
 
 import './editor.css'
 import { useSelector,useDispatch } from 'react-redux';
@@ -19,6 +19,7 @@ const handleTitleChange = (e: any) => {
   const newValue = e.target.value;
   dispatch(updateNoteTitle(newValue));
 };
+
 
   return (
     <div className='editor-block'>
@@ -41,7 +42,12 @@ const handleTitleChange = (e: any) => {
           <div className='creation-date'>Creation date: </div>
           <div className='word-count'>Word count: </div>
           <div className='character-count'>Character count: </div>
-          <div className='remove-note-button'>Remove note</div>
+          <div className='remove-note-button' 
+          onClick={()=> {
+          dispatch(removeNote())
+        }
+          } 
+          >Remove note</div>
 
         </footer>
 

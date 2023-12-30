@@ -16,11 +16,7 @@ notes = notelist.map((item: any) => (
   <div   className={item.id === activeNote ? 'active-note-item' : 'note-item'}
 
    key={item.id} id={item.id} onClick={()=> {
-    console.log('Dispatching with id:', item.id);
-    
-
-  
-  
+    console.log('Dispatching with id:', item.id);   
   dispatch(switchNote(item.id))
 }
   } > 

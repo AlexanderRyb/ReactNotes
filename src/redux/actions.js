@@ -19,4 +19,9 @@ export const updateNoteTitle = (noteid) => {
     payload: noteid
   };
 };
+export const removeNote = () => {
+  return {
+    type: "REMOVENOTE",
+  };
+};
 
