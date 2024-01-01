@@ -56,7 +56,7 @@ export default function reducer(state = initialState, action){
 
         }  
         case "REMOVENOTE":
-            const noteToRemove = state.activeNote;
+            const noteToRemove = state.activeNote; 
             const updatedNotes = state.notes.filter(note => note.id !== noteToRemove);
 
             return{
