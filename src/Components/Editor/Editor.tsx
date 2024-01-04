@@ -2,10 +2,25 @@ import  {updateNoteContent, updateNoteTitle, removeNote}  from '../../redux/acti
 
 import './editor.css'
 import { useSelector,useDispatch } from 'react-redux';
+import Modal from 'react-modal';
+import React from 'react'
 
+
+Modal.setAppElement('#root');
 
 export const Editor = () => {
   const dispatch = useDispatch();
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+  function afterOpenModal() {
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
 
   const activeNote = useSelector((state: any)=> state.activeNote)
 const notes = useSelector((state: any)=> state.notes)
@@ -70,13 +85,21 @@ const wordCount = countWords(notes[activeNote].content)
           <div className='word-count'>Word count: {wordCount} </div>
           <div className='character-count'>Character count: {characterCount}</div>
           <div className='remove-note-button' 
-          onClick={()=> {
-          dispatch(removeNote())
-        }
+          onClick={()=> {notes.length > 1 ? dispatch(removeNote()) : openModal() }
           } 
           >Remove note</div>
 
         </footer>
+        <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        contentLabel="Modal"
+        className={"modal"}
+      >
+        <div>Can't remove this element</div>
+        <button className={"modal-button"} onClick={closeModal}>close</button>
+      </Modal>
 
     </div>
   )
