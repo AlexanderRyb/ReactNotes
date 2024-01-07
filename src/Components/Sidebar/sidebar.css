@@ -33,6 +33,8 @@
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
+  color: 	#5c728a;
+
 }
 .note-item:hover, .active-note-item:hover{
   cursor: pointer;
@@ -42,6 +44,8 @@
   box-sizing: border-box;
   padding: 10px;
 
-  background-color: #dddddd;
+  background-color: white;
+  color: 	#5c728a;
+  font-weight: bold;
   height: 100%;
 }

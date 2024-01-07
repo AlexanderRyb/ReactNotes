@@ -17,11 +17,8 @@ export default function reducer(state = initialState, action){
             newnote.content = "test"
            updatedNoteList.push(newnote)
 
-           console.log("noteid is "+newnote.id)
-           console.log("note is "+newnote.content)
-           console.log("first note is "+newnote.content)
+         
            let noteIndex = updatedNoteList.findIndex(note => note.id === newnote.id)
-           console.log("note index "+noteIndex)
 
 
 

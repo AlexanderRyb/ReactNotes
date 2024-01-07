@@ -8,12 +8,15 @@ const dispatch = useDispatch();
 const notelist = useSelector((state: any) => state.notes)
 
 
+
 const handleClick = () => { dispatch(createNote)};
 let notes =[]
 const activeNote = useSelector((state: any)=> state.activeNote)
+console.log("active note is "+activeNote)
+
 
 notes = notelist.map((item: any) => (
-  <div   className={item.id === activeNote ? 'active-note-item' : 'note-item'}
+  <div   className={item.id === notelist[activeNote].id? 'active-note-item' : 'note-item'}
 
    key={item.id} id={item.id} onClick={()=> {
     console.log('Dispatching with id:', item.id);   
