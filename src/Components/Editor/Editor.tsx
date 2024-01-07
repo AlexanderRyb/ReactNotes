@@ -34,7 +34,7 @@ const handleTitleChange = (e: any) => {
   dispatch(updateNoteTitle(newValue));
 };
 
-const characterCount= notes[activeNote].content.length
+const characterCount = notes[activeNote].content.length
 
 function countWords(inputString: string){
   let wordCounter = 0;

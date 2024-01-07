@@ -1,6 +1,6 @@
 const initialState = {
     notes:[
-        { id: 0, title: "new note", content: 'GitHub repo: https://github.com/AlexanderRyb/ReactNotes'},
+        { id: "0", title: "new note", content: 'GitHub repo: https://github.com/AlexanderRyb/ReactNotes'},
     ],
     activeNote: 0,
     editorValue:""
@@ -12,17 +12,25 @@ export default function reducer(state = initialState, action){
             let updatedNoteList = [...state.notes]
             console.log(updatedNoteList)
             let newnote = {}
-            newnote.id = state.notes.length
+            newnote.id = crypto.randomUUID()
             newnote.title = "new note"
-            newnote.content = ""
+            newnote.content = "test"
            updatedNoteList.push(newnote)
+
+           console.log("noteid is "+newnote.id)
+           console.log("note is "+newnote.content)
+           console.log("first note is "+newnote.content)
+           let noteIndex = updatedNoteList.findIndex(note => note.id === newnote.id)
+           console.log("note index "+noteIndex)
+
+
 
             return{
                 //append new note to state
                 ...state,
                 notes: updatedNoteList,
                 //switch to that note in the editor
-                activeNote: newnote.id
+                activeNote:noteIndex
                 //
             }
 
@@ -30,10 +38,11 @@ export default function reducer(state = initialState, action){
          case "SWITCHNOTE":
             //put note content into the editor box
             console.log("action:"+action.payload.noteid)
+            let updatedNoteIndex = state.notes.findIndex(note =>note.id ===action.payload.noteid)
             
             return{
                 ...state, 
-                activeNote: action.payload.noteid 
+                activeNote: updatedNoteIndex
 
             }   
         case "UPDATENOTECONTENT":
