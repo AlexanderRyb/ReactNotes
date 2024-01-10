@@ -15,6 +15,9 @@
   border-bottom: 1px solid black;
   font-size: 25px;
 }
+.title-edit-input:focus{
+  outline: none;
+}
 .page-content-editor {
   width: 100%;
   height: 85%;
