@@ -4,6 +4,9 @@ import './editor.css'
 import { useSelector,useDispatch } from 'react-redux';
 import Modal from 'react-modal';
 import React from 'react'
+import ContentEditable from 'react-contenteditable';
+
+
 
 
 Modal.setAppElement('#root');
@@ -63,6 +66,7 @@ function countWords(inputString: string){
 const wordCount = countWords(notes[activeNote].content)
 
 
+
   return (
     <div className='editor-block'>
       <div className='page-title'>
@@ -71,13 +75,19 @@ const wordCount = countWords(notes[activeNote].content)
         </input>
 
  </div>
+ <div className='formatting-block'>
+  <EditButton cmd="bold">bold</EditButton>
+  <EditButton cmd="italic" />
+
+  <button>italics</button>
+ </div>
       <div className='page-content-editor'>
-        <textarea className='page-content-input' placeholder="Type the content of your note here..." value={notes[activeNote].content}  
+        <ContentEditable contentEditable="true" className='page-content-input' html={notes[activeNote].content} placeholder="Type the content of your note here..." 
           onChange={handleTextFieldChange}
 
-
-
-            ></textarea>
+            >
+            
+            </ContentEditable>
 
         </div>
         <footer>
@@ -103,4 +113,17 @@ const wordCount = countWords(notes[activeNote].content)
 
     </div>
   )
+}
+function EditButton(props: any) {
+  return (
+    <button
+      key={props.cmd}
+      onMouseDown={evt => {
+        evt.preventDefault(); // Avoids loosing focus from the editable area
+        document.execCommand(props.cmd, false, props.arg); // Send the command to the browser
+      }}
+    >
+      {props.name || props.cmd}
+    </button>
+  );
 }
