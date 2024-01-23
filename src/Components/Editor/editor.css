@@ -19,10 +19,25 @@
   outline: none;
 }
 .formatting-block{
-  height: 50px;
+  height: 30px;
   margin-left: 20px;
   border:1px solid #edf1f5;
-  
+  display: flex;
+  justify-content: flex-start;  
+}
+.format-button{
+aspect-ratio: 1/1;  
+height: 100%;
+display: flex;
+align-items: center;
+border: none;
+}
+.format-button img:hover{
+  background-color: #cbdaf1;
+}
+.format-button img{
+  width: 85%;
+  height: 85%;
 }
 .page-content-editor {
   width: 100%;
@@ -40,6 +55,7 @@
   border:1px solid #edf1f5;
   margin-top: 5px;
   text-align: start;
+  padding: 5px;
 
 }
 footer {
@@ -89,3 +105,4 @@ footer {
 .modal-button{
     width: 30%;
 }
+
