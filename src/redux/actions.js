@@ -24,4 +24,10 @@ export const removeNote = () => {
     type: "REMOVENOTE",
   };
 };
+export const search = (query) => {
+  return {
+    type: "SEARCH",
+    payload: query,
+  };
+};
 

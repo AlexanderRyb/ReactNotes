@@ -3,7 +3,10 @@ const initialState = {
         { id: "0", title: "Default note", content: 'GitHub repo: https://github.com/AlexanderRyb/ReactNotes'},
     ],
     activeNote: 0,
-    editorValue:""
+    editorValue:"",
+    searchResult: [],
+    textSearchValue: ""
+
 
 }
 export default function reducer(state = initialState, action){
@@ -73,7 +76,32 @@ export default function reducer(state = initialState, action){
                     notes: updatedNotes,
                     activeNote: 0
                 
-                }        
+                } 
+        case "SEARCH":
+            console.log("search is " +action.payload)
+            let results
+            if (action.payload){
+                results =  state.notes.filter((item) =>
+                item.title
+                  .toLowerCase()
+                  .includes(state.textSearchValue.toLowerCase())
+                  
+              )             
+            } 
+            else {
+                results = state.notes
+                console.log(results)
+              }
+
+
+          
+            return{
+                ...state,
+                textSearchValue: action.payload,
+                searchResult:results
+
+               
+            }               
             
           
         default: 
