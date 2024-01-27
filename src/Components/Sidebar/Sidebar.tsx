@@ -7,8 +7,9 @@ import { search } from "../../redux/actions";
 
 export default function Sidebar() {
   const dispatch = useDispatch();
-  
-  let notelist: Array<any> = useSelector((state: any) => state.searchResult)
+
+  let searchString: string = useSelector((state: any)=> state.textSearchValue)
+  let searchResult: Array<any> = useSelector((state: any) => state.searchResult)
   let allNotes = useSelector((state: any) => state.notes)
 
   const handleClick = () => {
@@ -17,11 +18,26 @@ export default function Sidebar() {
   const handleChange = (e: any) => {
     dispatch(search(e.target.value));
   };
-  let notes = [];
   const activeNote = useSelector((state: any) => state.activeNote);
+  let displayedNotes = []
+
+  let notes: any = []
+
+
   console.log("active note is " + activeNote);
 
-  notes = notelist.map((item: any) => (
+  if (searchString == ""){
+    console.log("search string is empty. Showing full search.")
+    notes = allNotes
+
+    
+  }
+  else{   
+    console.log("search list is not empty. Showing search result")
+     notes = searchResult 
+  
+  }
+  displayedNotes = notes.map((item: any) => (
     <div
       className={
         item.id === allNotes[activeNote].id ? "active-note-item" : "note-item"
@@ -36,6 +52,7 @@ export default function Sidebar() {
       {item.title}
     </div>
   ));
+
 
   return (
     <div className="sidebar">
@@ -66,7 +83,7 @@ export default function Sidebar() {
         </button>
       </div>
 
-      <div>{notes}</div>
+      <div>{displayedNotes}</div>
     </div>
   );
 }

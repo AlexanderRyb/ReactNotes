@@ -89,7 +89,7 @@ export default function reducer(state = initialState, action){
               )             
             } 
             else {
-                results = state.notes
+                results = []
                 console.log(results)
               }
 
