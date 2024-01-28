@@ -1,6 +1,6 @@
 const initialState = {
     notes:[
-        { id: "0", title: "Default note", content: 'GitHub repo: https://github.com/AlexanderRyb/ReactNotes'},
+        { id: "0", title: "Default note", content: 'GitHub repo: https://github.com/AlexanderRyb/ReactNotes', creationTime: '0'},
     ],
     activeNote: 0,
     editorValue:"",
@@ -18,6 +18,8 @@ export default function reducer(state = initialState, action){
             newnote.id = crypto.randomUUID()
             newnote.title = "New note"
             newnote.content = "test"
+            const newTimestamp = Date.now()
+            newnote.creationTime = newTimestamp
            updatedNoteList.push(newnote)
 
          
