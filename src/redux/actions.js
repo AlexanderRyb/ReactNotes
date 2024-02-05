@@ -30,4 +30,16 @@ export const search = (query) => {
     payload: query,
   };
 };
+export const sortByName = () =>{
+  return {
+    type: 'SORTBYNAME'
+  }
+}
+export const sortByDate = () =>{
+  return {
+    type: 'SORTBYDATE'
+  }
+}
+
+
 
