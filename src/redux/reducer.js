@@ -12,7 +12,7 @@ const initialState = {
   displayedNotes: [],  
   textSearchValue: "",
 };
-export default function reducer(state = initialState, action) {
+ function reducer(state = initialState, action) {
   switch (action.type) {
     case "CREATENOTE":
       let updatedNoteList = [...state.notes];
@@ -141,3 +141,4 @@ export default function reducer(state = initialState, action) {
       return state;
   }
 }
+export default reducer
