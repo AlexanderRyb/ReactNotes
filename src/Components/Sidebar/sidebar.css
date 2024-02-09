@@ -17,6 +17,14 @@
 .search-panel input{
   margin: auto;
   width: 80%;
+  border: 1px solid grey;
+  border-radius: 3px;
+  height: 35%
+}
+
+
+.search-panel input:focus{
+outline: 1px solid rgb(12, 140, 172);
 }
 .sidebar-button-panel{
   width: 100%;
@@ -33,6 +41,15 @@
   box-sizing: border-box;
 
 }
+.sort-by-date-button{
+  aspect-ratio: 1/1;
+  height: 70%;
+  display: block;
+  border: none;
+  box-sizing: border-box;
+}
+
+
 .new-note-button {
   aspect-ratio: 1/1;
   height: 70%;

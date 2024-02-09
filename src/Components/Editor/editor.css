@@ -12,7 +12,7 @@
   width: 80%;
   height: 50%;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
   font-size: 25px;
 }
 .title-edit-input:focus{
@@ -56,6 +56,7 @@ border: none;
   margin-top: 5px;
   text-align: start;
   padding: 5px;
+  padding-left: 20px;
 
 }
 footer {

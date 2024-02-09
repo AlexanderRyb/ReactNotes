@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { createNote, switchNote } from "../../redux/actions";
 import { ReactComponent as NewNote } from "./new_note.svg";
 import { ReactComponent as SortOrder } from "./sort_order.svg";
+import { ReactComponent as DateOrder } from "./date.svg"
 import { search } from "../../redux/actions";
 import { sortByName } from "../../redux/actions";
 import { sortByDate } from "../../redux/actions";
@@ -78,9 +79,18 @@ export default function Sidebar() {
               fill: "grey",
             }}
           ></SortOrder>
+
         </button>
         <button className="sort-by-date-button" onClick={handleSortByDate}>
-          date
+          <DateOrder
+          style={{
+            width: "100%",
+            height: "100%",
+            fill: "grey",
+          }}
+          >
+
+          </DateOrder>
 
         </button>
       </div>

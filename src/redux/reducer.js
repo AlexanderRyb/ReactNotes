@@ -19,7 +19,7 @@ const initialState = {
       console.log(updatedNoteList);
       let newnote = {};
       newnote.id = crypto.randomUUID();
-      newnote.title = "a New note";
+      newnote.title = "New note";
       newnote.content = "test";
       const newTimestamp = Date.now();
       newnote.creationTime = newTimestamp;
