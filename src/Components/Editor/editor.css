@@ -74,6 +74,11 @@ footer {
   justify-content: flex-start;
   gap: 10px;
 }
+.stats-block{
+  display: flex;
+  gap: 10px;
+  color: grey;
+}
 .remove-note-button {
   background-color: #edf1f5;
   padding: 5px;

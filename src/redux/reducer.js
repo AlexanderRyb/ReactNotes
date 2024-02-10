@@ -21,8 +21,25 @@ const initialState = {
       newnote.id = crypto.randomUUID();
       newnote.title = "New note";
       newnote.content = "test";
-      const newTimestamp = Date.now();
-      newnote.creationTime = newTimestamp;
+
+      function formatDate(date = new Date()) {
+        const year = date.toLocaleString('default', {year: 'numeric'});
+        const month = date.toLocaleString('default', {
+          month: '2-digit',
+        });
+        const day = date.toLocaleString('default', {day: 'numeric'});
+        const hour = date.toLocaleString('default',{hour: 'numeric', hour12: false})
+        const minute = date.toLocaleString('default',{minute: '2-digit'})
+        const second = date.toLocaleString('default',{second: '2-digit'})
+        const noteDate = year+"/"+month+"/"+day+" "+hour+":"+minute+":"+second
+    
+      
+        return noteDate;
+      }
+      let dateValue = formatDate(new Date())
+
+
+      newnote.creationTime = dateValue;
       updatedNoteList.push(newnote);
 
       let noteIndex = updatedNoteList.findIndex(

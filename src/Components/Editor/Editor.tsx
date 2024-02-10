@@ -66,6 +66,7 @@ export const Editor = () => {
     return wordCounter;
   }
   const wordCount = countWords(notes[activeNote].content);
+  const creationDate = notes[activeNote].creationTime
 
   return (
     <div className="editor-block">
@@ -116,9 +117,12 @@ export const Editor = () => {
         ></ContentEditable>
       </div>
       <footer>
-        <div className="creation-date">Creation date: </div>
+        <div className="stats-block">
+        <div className="creation-date">Creation date: {creationDate} </div>
         <div className="word-count">Word count: {wordCount} </div>
         <div className="character-count">Character count: {characterCount}</div>
+        </div>
+        
         <div
           className="remove-note-button"
           onClick={() => {
