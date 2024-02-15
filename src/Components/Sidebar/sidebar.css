@@ -71,12 +71,8 @@ outline: 1px solid rgb(12, 140, 172);
 
 
 }
-.new-note-button:hover{
-  box-sizing: border-box;
-  /* border: 1px dotted black; */
-
+.new-note-button, .change-sort-order-button, .sort-by-date-button:hover{
   cursor: pointer;
-
 
 }
 .note-item {

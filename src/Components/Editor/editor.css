@@ -15,36 +15,69 @@
   border-bottom: 1px solid grey;
   font-size: 25px;
 }
-.title-edit-input:focus{
+.title-edit-input:focus {
   outline: none;
 }
-.formatting-block{
+.formatting-block {
   height: 30px;
+  width: fit-content;
   margin-left: 20px;
-  border:1px solid #edf1f5;
+  border: 1px solid #edf1f5;
   display: flex;
-  justify-content: flex-start;  
+  justify-content: flex-start;
 }
-.format-button{
-aspect-ratio: 1/1;  
-height: 100%;
-display: flex;
-align-items: center;
-border: none;
+.format-button {
+  aspect-ratio: 1/1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
 }
-.format-button img:hover{
-  background-color: #cbdaf1;
-}
-.format-button img{
+
+.format-button img {
   width: 85%;
   height: 85%;
+}
+.format-button:hover{
+  background-color: #cbdaf1;
 }
 .page-content-editor {
   width: 100%;
   height: 80%;
   box-sizing: border-box;
-
 }
+.bold-button, .header-button, .italics-button, .underline-button, .ordered-list-button, .bullet-list-button, .strikethrough-button{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.bold-button { 
+  background-image: url("bold.svg"); 
+}
+.header-button{ 
+  background-image: url("header.svg"); 
+}
+.italics-button{
+  background-image: url("italics.svg");
+}
+.underline-button{
+  background-image: url("underline.svg");
+}
+.bullet-list-button{
+  background-image: url("bulletList.svg");
+}
+.ordered-list-button{
+  background-image: url("ordered_list.svg");
+}
+.strikethrough-button{
+  background-image: url("strikethrough.svg");
+}
+
+
 .page-content-input {
   width: 90%;
   height: 100%;
@@ -52,19 +85,18 @@ border: none;
   border: none;
   overflow: auto;
   outline: none;
-  border:1px solid #edf1f5;
+  border: 1px solid #edf1f5;
   margin-top: 5px;
   text-align: start;
   padding: 5px;
   padding-left: 20px;
-
 }
 footer {
   width: 100%;
   height: 5%;
   position: absolute;
   bottom: 0;
-  border:1px solid #edf1f5;
+  border: 1px solid #edf1f5;
   padding: 5px;
   box-sizing: border-box;
 
@@ -74,7 +106,7 @@ footer {
   justify-content: flex-start;
   gap: 10px;
 }
-.stats-block{
+.stats-block {
   display: flex;
   gap: 10px;
   color: grey;
@@ -84,7 +116,7 @@ footer {
   padding: 5px;
   border-radius: 2px;
   color: #606266;
-  margin-left: auto
+  margin-left: auto;
 }
 .remove-note-button:hover {
   background-color: #e85d75;
@@ -105,10 +137,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
 }
-.modal-button{
-    width: 30%;
+.modal-button {
+  width: 30%;
 }
-

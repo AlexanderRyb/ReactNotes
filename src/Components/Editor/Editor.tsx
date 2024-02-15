@@ -3,12 +3,12 @@ import {
   updateNoteTitle,
   removeNote,
 } from "../../redux/actions";
-import BoldSVG from "./bold.svg";
 import Italics from "./italics.svg";
 import Underline from "./underline.svg";
 import OrderedList from "./ordered_list.svg";
 import BulletList from "./bulletList.svg";
 import  Strikethrough from "./strikethrough.svg";
+
 
 import "./editor.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -80,28 +80,28 @@ export const Editor = () => {
       </div>
       <div className="formatting-block">
         <EditButton cmd="bold">
-          <img src={BoldSVG} alt="bold" />
-        </EditButton>
+          <div className="bold-button"></div>
+        </EditButton>       
         <EditButton cmd="italic">
-          <img src={Italics} alt="italics" />
+          <div className="italics-button"></div>
         </EditButton>
         <EditButton cmd="underline">
-          <img src={Underline} alt="underline" />
+          <div className="underline-button"></div>
         </EditButton>
         <EditButton cmd="formatBlock" arg="h1" name="heading">
-          H1
+          <div className="header-button"></div>
         </EditButton>
         <EditButton cmd="formatBlock" arg="p" name="paragraph">
           P
         </EditButton>
         <EditButton cmd="strikeThrough">
-          <img src={Strikethrough} alt="strikethrough" />
+          <div className="strikethrough-button"></div>
         </EditButton>
         <EditButton cmd="insertOrderedList">
-          <img src={OrderedList} alt="list" />
+          <div className="ordered-list-button"></div>          
         </EditButton>
         <EditButton cmd="insertUnorderedList">
-          <img src={BulletList} alt="bullet list" />
+          <div className="bullet-list-button"></div>
         </EditButton>
         <EditButton cmd="blockquote">
 
