@@ -29,7 +29,6 @@ export default function Sidebar() {
 
   const activeNote = useSelector((state: any) => state.activeNote);
 
-  console.log("active note is " + activeNote);
   let searchString: string = useSelector((state: any) => state.textSearchValue);
 
   if (!searchString) {

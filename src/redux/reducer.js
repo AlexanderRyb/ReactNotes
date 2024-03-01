@@ -112,7 +112,7 @@ const initialState = {
         displayedNotes: results,
       };
 
-    case "SORTBYNAME":
+    case "SORTBYDATE":
     let sortedByName = [...state.notes]
       sortedByName =  state.notes.map(item=>item).sort((a, b) => {
         const titleA = a.creationTime
@@ -126,12 +126,14 @@ const initialState = {
         // names must be equal
         return 0;
       });
+      console.log("sorted by date")
+
         return {
             ...state,
             displayedNotes: sortedByName,
             notes: sortedByName
         }
-        case "SORTBYDATE":
+        case "SORTBYNAME":
     let sortedByDate  = [...state.notes]
     sortedByDate = state.notes.map(item=>item).sort((a, b) => {
       const dateA = a.title
@@ -145,6 +147,9 @@ const initialState = {
       // names must be equal
       return 0;
     });
+    console.log("sorted by name")
+
+
       return {
           ...state,
           displayedNotes: sortedByDate,
