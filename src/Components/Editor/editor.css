@@ -12,8 +12,10 @@
   width: 80%;
   height: 50%;
   border: none;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(218, 211, 211);
   font-size: 25px;
+  font-weight: 500;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .title-edit-input:focus {
   outline: none;
@@ -48,12 +50,16 @@
 }
 .bold-button, .header-button, .italics-button, .underline-button, .ordered-list-button, .bullet-list-button, .strikethrough-button{
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 90%;
   background-position: center;
   display: flex;
   align-items: center;
   height: 100%;
   width: 100%;
+}
+.paragraph-button{
+  margin: auto;
+  font-weight: bold;
 }
 .bold-button { 
   background-image: url("bold.svg"); 
@@ -66,6 +72,7 @@
 }
 .underline-button{
   background-image: url("underline.svg");
+
 }
 .bullet-list-button{
   background-image: url("bulletList.svg");
@@ -114,7 +121,7 @@ footer {
 .remove-note-button {
   background-color: #edf1f5;
   padding: 5px;
-  border-radius: 2px;
+  border-radius: 7px;
   color: #606266;
   margin-left: auto;
 }

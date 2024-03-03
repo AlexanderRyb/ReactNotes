@@ -92,7 +92,11 @@ export const Editor = () => {
           <div className="header-button"></div>
         </EditButton>
         <EditButton cmd="formatBlock" arg="p" name="paragraph">
-          P
+          <div className="paragraph-button">
+            P
+
+          </div>
+          
         </EditButton>
         <EditButton cmd="strikeThrough">
           <div className="strikethrough-button"></div>
