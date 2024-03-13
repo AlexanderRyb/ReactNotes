@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
 .sidebar {
   width: 15%;
   height: 100vh;
@@ -79,10 +81,12 @@ outline: 2px solid rgb(12, 140, 172);
   width: 100%;
   box-sizing: border-box;
   padding:5px;
-  color: 	black;
+  color: 	rgb(90, 89, 89);
   text-align: start;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
   padding-left: 15px;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 500;
 
 }
 .note-item:hover{
@@ -94,6 +98,10 @@ outline: 2px solid rgb(12, 140, 172);
   padding: 5px;
   text-align: start;
   padding-left: 15px;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 500;
+
+  color: black;
 
   border-bottom: 1px solid #e5e7eb;
 
