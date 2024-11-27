@@ -87,10 +87,14 @@ outline: 2px solid rgb(12, 140, 172);
   padding-left: 15px;
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 500;
+  user-select: none;
+
+  
 
 }
 .note-item:hover{
   background-color: #cbdaf1;
+
 }
 .active-note-item {
   height: 40px;
@@ -100,6 +104,8 @@ outline: 2px solid rgb(12, 140, 172);
   padding-left: 15px;
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 500;
+  user-select: none;
+
 
   color: black;
 
